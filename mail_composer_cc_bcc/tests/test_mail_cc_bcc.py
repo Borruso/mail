@@ -13,7 +13,7 @@ from odoo.addons.mail.wizard.mail_compose_message import (
 )
 
 VALID_HASHES = {
-    "mail.composer:_compute_partner_ids": ["4e49f0d6c53f41ac24b02176e97b600a"],
+    "mail.composer:_compute_partner_ids": ["c3903ab78bf2e5d9aba078ac2689d974"],
 }
 
 

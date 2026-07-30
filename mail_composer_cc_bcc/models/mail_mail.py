@@ -49,6 +49,9 @@ class MailMail(models.Model):
         # with the same To, Cc headers (to be shown by email client as users expect)
         recipients = set()
         for m in res:
+            # Odoo reuses the headers dictionary for all outgoing entries.
+            # Copy it before adding recipient-specific headers.
+            m["headers"] = dict(m["headers"])
             rcpt_to = None
             if m["email_to"]:
                 rcpt_to = extract_rfc2822_addresses(m["email_to"][0])[0]
